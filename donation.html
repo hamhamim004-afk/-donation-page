@@ -1,1 +1,81 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>حمایت مالی</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  text-align: center;
+  padding: 40px 15px;
+}
+.box {
+  max-width: 500px;
+  margin: auto;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+.address {
+  direction: ltr;
+  word-break: break-all;
+  background: #eee;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+small {
+  color: #666;
+}
+</style>
+</head>
 
+<body>
+
+<div class="box">
+
+<h1>حمایت مالی</h1>
+
+<p>
+اگر مایل هستید، می‌توانید به صورت داوطلبانه از من حمایت کنید.
+</p>
+
+<h3>TRX / USDT (TRC-20)</h3>
+
+<div class="address" id="wallet">
+TYiPDeThA9kLhDXMHNXSMp4BtSF1ZE5HBZ
+</div>
+
+<button onclick="copyAddress()">
+کپی آدرس
+</button>
+
+<p>
+<small>
+قبل از ارسال، حتماً شبکه TRON / TRC-20 و آدرس مقصد را بررسی کنید.
+</small>
+</p>
+
+</div>
+
+<script>
+function copyAddress() {
+  const address = document.getElementById("wallet").innerText.trim();
+
+  navigator.clipboard.writeText(address).then(function() {
+    alert("آدرس کپی شد");
+  });
+}
+</script>
+
+</body>
+</html>
